@@ -1,0 +1,20 @@
+- description: hello world
+  executionEnabled: true
+  id: 1d95ea4c-91dc-47d7-b093-cf334463e80b
+  loglevel: INFO
+  name: hello world
+  nodeFilterEditable: false
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - configuration:
+        image: hello-world
+        volume: /var/run/docker.sock:/var/run/docker.sock
+      nodeStep: true
+      type: docker-run-workflow-step
+    keepgoing: false
+    pluginConfig:
+      WorkflowStrategy:
+        node-first: null
+    strategy: node-first
+  uuid: 1d95ea4c-91dc-47d7-b093-cf334463e80b
